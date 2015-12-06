@@ -200,7 +200,7 @@ void NPlayer::createActions()
 	m_alwaysOnTopAction->setObjectName("AlwaysOnTopAction");
 
 	m_fullScreenAction = new NAction(tr("Fullscreen Mode"), this);
-	m_fullScreenAction->setStatusTip(tr("Hide all controll except waveform"));
+	m_fullScreenAction->setStatusTip(tr("Hide all controls except waveform"));
 	m_fullScreenAction->setObjectName("FullScreenAction");
 	m_fullScreenAction->setCustomizable(true);
 
@@ -518,6 +518,7 @@ void NPlayer::readMessage(const QString &str)
 			m_playlistWidget->addFiles(files);
 			if (m_playbackEngine->state() == N::PlaybackStopped || NSettings::instance()->value("PlayEnqueued").toBool())
 				m_playlistWidget->playRow(lastRow);
+				m_playbackEngine->setPosition(0); // overrides setPosition() in loadDefaultPlaylist()
 		} else {
 			m_playlistWidget->playFiles(files);
 		}
@@ -528,12 +529,8 @@ void NPlayer::readMessage(const QString &str)
 
 void NPlayer::loadDefaultPlaylist()
 {
-	if (m_playlistWidget->count() > 0 || // files were added by calling message() directly in main()
-	    !QFileInfo(NCore::defaultPlaylistPath()).exists() ||
-	    !m_playlistWidget->setPlaylist(NCore::defaultPlaylistPath()))
-	{
+	if (!QFileInfo(NCore::defaultPlaylistPath()).exists() || !m_playlistWidget->setPlaylist(NCore::defaultPlaylistPath()))
 		return;
-	}
 
 	QStringList playlistRowValues = m_settings->value("PlaylistRow").toStringList();
 	if (!playlistRowValues.isEmpty()) {
@@ -541,7 +538,7 @@ void NPlayer::loadDefaultPlaylist()
 		qreal pos = playlistRowValues.at(1).toFloat();
 		if (pos > 0 && pos < 1) {
 			m_playlistWidget->playRow(row);
-			m_playbackEngine->setPosition(pos);
+			m_playbackEngine->setPosition(pos); // postponed till file duration is available
 			if (m_settings->value("StartPaused").toBool())
 				m_playbackEngine->pause();
 		} else {
@@ -726,9 +723,10 @@ void NPlayer::on_playbackEngine_mediaChanged(const QString &path)
 	QString titleDefault = QCoreApplication::applicationName() + " " + QCoreApplication::applicationVersion();
 	if (QFile(path).exists()) {
 		NTagReaderInterface *tagReader = dynamic_cast<NTagReaderInterface *>(NPluginLoader::getPlugin(N::TagReader));
+		QString encoding = NSettings::instance()->value("EncodingTrackInfo").toString();
 		QString format = NSettings::instance()->value("WindowTitleTrackInfo").toString();
 		if (!format.isEmpty() && tagReader->isValid())
-			title = tagReader->toString(format);
+			title = tagReader->toString(format, encoding);
 		else
 			title = titleDefault;
 	} else {
@@ -909,6 +907,7 @@ void NPlayer::showSavePlaylistDialog()
 
 void NPlayer::showContextMenu(QPoint pos)
 {
-	m_contextMenu->exec(m_mainWindow->mapToGlobal(pos));
+	// (1, 1) offset to avoid accidental item activation
+	m_contextMenu->exec(m_mainWindow->mapToGlobal(pos) + QPoint(1, 1));
 }
 

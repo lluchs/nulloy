@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru">
+<TS version="2.1" language="lt">
 <context>
     <name>NAboutDialog</name>
     <message>
         <location filename="../aboutDialog.cpp" line="+50"/>
         <source>Version: </source>
-        <translation>Версия: </translation>
+        <translation>Versija: </translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Common</source>
-        <translation>Общие</translation>
+        <translation>Bendra</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Thanks</source>
-        <translation>Благодарности</translation>
+        <translation>Padėkos</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Changelog</source>
-        <translation>Список изменений</translation>
+        <translation>Keitimų žurnalas</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>License</source>
-        <translation>Лицензия</translation>
+        <translation>Licencija</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Užverti</translation>
     </message>
 </context>
 <context>
@@ -39,224 +39,224 @@
     <message>
         <location filename="../player.cpp" line="+148"/>
         <source>Show / Hide</source>
-        <translation>Скрыть / показать</translation>
+        <translation>Rodyti / Slėpti</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Toggle window visibility</source>
-        <translation>Скрыть или показать главное окно</translation>
+        <translation>Perjungti lango matomumą</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Play / Pause</source>
-        <translation>Старт / пауза</translation>
+        <translation>Groti / Pristabdyti</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Toggle playback</source>
-        <translation>Старт или поставить на паузу</translation>
+        <translation>Perjungti grojimą</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Stop</source>
-        <translation>Стоп</translation>
+        <translation>Stabdyti</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Stop playback</source>
-        <translation>Остановить проигрывание</translation>
+        <translation>Stabdyti grojimą</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Previous</source>
-        <translation>Предыдущий</translation>
+        <translation>Ankstesnis</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Play previous track in playlist</source>
-        <translation>Переключить на предыдущий трек в плейлисте</translation>
+        <translation>Groti ankstesnį grojaraščio takelį</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Next</source>
-        <translation>Следующий</translation>
+        <translation>Kitas</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Play next track in playlist</source>
-        <translation>Переключить на следующий трек в плейлисте</translation>
+        <translation>Groti kitą grojaraščio takelį</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Preferences...</source>
-        <translation>Настройки...</translation>
+        <translation>Nuostatos...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Exit</source>
-        <translation>Выход</translation>
+        <translation>Išeiti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Files...</source>
-        <translation>Добавить файлы...</translation>
+        <translation>Pridėti failus...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Directory...</source>
-        <translation>Добавить директорию...</translation>
+        <translation>Pridėti katalogą...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Save Playlist...</source>
-        <translation>Сохранить плейлист...</translation>
+        <translation>Įrašyti grojaraštį...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Show Cover Art</source>
-        <translation>Показывать обложку</translation>
+        <translation>Rodyti viršelį</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>About</source>
-        <translation>О программе</translation>
+        <translation>Apie</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>On Top During Playback</source>
-        <translation>Поверх всех окон во время проигрывания</translation>
+        <translation>Grojant, visada laikyti viršuje</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Always On Top</source>
-        <translation>Всегда поверх всех окон</translation>
+        <translation>Visada viršuje</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Fullscreen Mode</source>
-        <translation>Полноэкранный режим</translation>
+        <translation>Viso ekrano veiksena</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hide all controls except waveform</source>
-        <translation>Скрыть все элементы управления</translation>
+        <translation>Slėpti visus valdiklius, išskyrus bangos formą</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Shuffle</source>
-        <translation>Случайный порядок</translation>
+        <translation>Maišyti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Toggle playlist shuffle</source>
-        <translation>Включить случайный порядок плейлиста</translation>
+        <translation>Perjungti grojaraščio maišymą</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Toggle current item repeat</source>
-        <translation>Включить повтор текущего трека</translation>
+        <translation>Perjungti esamo elemento kartojimą</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Repeat</source>
-        <translation>На повторе</translation>
+        <translation>Kartoti</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Loop playlist</source>
-        <translation>Зациклить плейлист</translation>
+        <translation>Cikliškai groti grojaraštį</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Load next file in directory when finished</source>
-        <translation>Загрузить следующий файл из директории</translation>
+        <translation>Užbaigus, įkelti kitą failą iš katalogo</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <source>By Name</source>
-        <translation>Сортировать по имени</translation>
+        <translation>Pagal pavadinimą</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <source>By Date</source>
-        <translation>Сортировать по дате</translation>
+        <translation>Pagal datą</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Jump Forward #%1</source>
-        <translation>Прыжок вперед #%1</translation>
+        <translation>Šuolis pirmyn #%1</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Make a jump forward #%1</source>
-        <translation>Сделать прыжок вперед #%1</translation>
+        <translation>Šoktelėti pirmyn #%1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Jump Backwards #%1</source>
-        <translation>Прыжок назад #%1</translation>
+        <translation>Šuolis atgal #%1</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Make a jump backwards #%1</source>
-        <translation>Сделать прыжок назад #%1</translation>
+        <translation>Šoktelėti atgal #%1</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Playlist</source>
-        <translation>Плейлист</translation>
+        <translation>Grojaraštis</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>File</source>
-        <translation>Файл</translation>
+        <translation>Failas</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Controls</source>
-        <translation>Управление</translation>
+        <translation>Valdikliai</translation>
     </message>
     <message>
         <location line="+307"/>
         <source>Latest: </source>
-        <translation>Последняя: </translation>
+        <translation>Naujausia: </translation>
     </message>
     <message>
         <location line="+5"/>
         <source> Update</source>
-        <translation> Обновление</translation>
+        <translation> Atnaujinti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>A newer version is available: </source>
-        <translation>Новое обновление доступно: </translation>
+        <translation>Yra prieinama naujesnė versija: </translation>
     </message>
     <message>
         <location line="+196"/>
         <source>All supported</source>
-        <translation>Все поддерживаемые</translation>
+        <translation>Visi palaikomi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All files</source>
-        <translation>Все файлы</translation>
+        <translation>Visi failai</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>M3U Playlist</source>
-        <translation>M3U Плейлист</translation>
+        <translation>M3U grojaraštis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extended M3U Playlist</source>
-        <translation>Расширенный M3U Плейлист</translation>
+        <translation>Išplėstinis M3U grojaraštis</translation>
     </message>
     <message>
         <location line="-600"/>
         <source>Window</source>
-        <translation>Окно</translation>
+        <translation>Langas</translation>
     </message>
 </context>
 <context>
@@ -264,22 +264,22 @@
     <message>
         <location filename="../widgetCollection/playlistWidget.cpp" line="+58"/>
         <source>Reveal in File Manager...</source>
-        <translation>Показать в файловом менеджере...</translation>
+        <translation>Rodyti failų tvarkytuvėje...</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Remove From Playlist</source>
-        <translation>Удалить из плейлиста</translation>
+        <translation>Šalinti iš grojaraščio</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Move To Trash</source>
-        <translation>Переместить в корзину</translation>
+        <translation>Perkelti į šiukšlinę</translation>
     </message>
     <message>
         <location line="+436"/>
         <source>Drop media here</source>
-        <translation>Перетащите файл сюда</translation>
+        <translation>Numeskite failus čia</translation>
     </message>
 </context>
 <context>
@@ -287,209 +287,209 @@
     <message>
         <location filename="../preferencesDialog.cpp" line="+55"/>
         <source>Ok</source>
-        <translation>Ок</translation>
+        <translation>Gerai</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cancel</source>
-        <translation>Отменить</translation>
+        <translation>Atsisakyti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Apply</source>
-        <translation>Принять</translation>
+        <translation>Taikyti</translation>
     </message>
     <message>
         <location line="+9"/>
         <source> Preferences</source>
-        <translation> Настройки</translation>
+        <translation> Nuostatos</translation>
     </message>
     <message>
         <location line="+90"/>
         <location line="+38"/>
         <location line="+37"/>
         <source>Supported parameters:</source>
-        <translation>Поддерживаемые параметры:</translation>
+        <translation>Palaikomi parametrai:</translation>
     </message>
     <message>
         <location line="-72"/>
         <source>Directory path</source>
-        <translation>Путь к директории</translation>
+        <translation>Katalogo kelias</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>File path</source>
-        <translation>Путь к файлу</translation>
+        <translation>Failo kelias</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Artist</source>
-        <translation>Имя артиста</translation>
+        <translation>Atlikėjas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Title</source>
-        <translation>Название</translation>
+        <translation>Pavadinimas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Album</source>
-        <translation>Альбом</translation>
+        <translation>Albumas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Comment</source>
-        <translation>Комментарий</translation>
+        <translation>Komentaras</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Genre</source>
-        <translation>Жанр</translation>
+        <translation>Žanras</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Year</source>
-        <translation>Год</translation>
+        <translation>Metai</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Track number</source>
-        <translation>Номер</translation>
+        <translation>Takelio numeris</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Current time position (Waveform only)</source>
-        <translation>Текущее время проигрывания (только для звуковой волны)</translation>
+        <translation>Esamo laiko vieta (tik bangos formai)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Remaining time (Waveform only)</source>
-        <translation>Оставшееся время проигрывания (только для звуковой волны)</translation>
+        <translation>Likęs laikas (tik bangos formai)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Time position under cursor (Tooltip only)</source>
-        <translation>Время проигрывания под курсором (только для всплывающей подсказки)</translation>
+        <translation>Laiko vieta po žymekliu (tik mygtuko etiketei)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Time offset under cursor (Tooltip only)</source>
-        <translation>Разница времени проигрывания под курсором (только для всплывающей подсказки)</translation>
+        <translation>Laiko poslinkis po žymekliu (tik mygtuko etiketei)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Duration in format hh:mm:ss</source>
-        <translation>Продолжительность в формате чч:мм:сс</translation>
+        <translation>Trukmė, vv:mm:ss formatu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Duration in seconds</source>
-        <translation>Продолжительность в секундах</translation>
+        <translation>Trukmė sekundėmis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bit depth</source>
-        <translation>Битность (битовая глубина)</translation>
+        <translation>Bitų gylis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bitrate in Kbps</source>
-        <translation>Битрейт (Кб/с)</translation>
+        <translation>Pralaidumas (Kb/s)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Sample rate in kHz</source>
-        <translation>Частота дискретизации (кГц)</translation>
+        <translation>Skaitmeninimo dažnis (kHz)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Number of channels</source>
-        <translation>Количество каналов</translation>
+        <translation>Kanalų skaičius</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>File name without extension</source>
-        <translation>Имя файла без расширения</translation>
+        <translation>Failo pavadinimas be prievardžio</translation>
     </message>
     <message>
         <location line="-92"/>
         <location line="+93"/>
         <source>File name</source>
-        <translation>Имя файла</translation>
+        <translation>Failo pavadinimas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>File name including absolute path</source>
-        <translation>Имя файла, включая полный путь</translation>
+        <translation>Failo pavadinimas su pilnu keliu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>File name extension</source>
-        <translation>Расширение имени файла</translation>
+        <translation>Failo pavadinimo prievardis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>File name extension, uppercased</source>
-        <translation>Расширение имени файла заглавными буквами</translation>
+        <translation>Failo pavadinimo prievardis, didžiosiomis raidėmis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Version number</source>
-        <translation>Номер версии</translation>
+        <translation>Versijos numeris</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&apos;%&apos; character</source>
-        <translation>&apos;%&apos; символ</translation>
+        <translation>&quot;%&quot; simbolis</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Conditions:</source>
-        <translation>Условия:</translation>
+        <translation>Sąlygos:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>true</source>
-        <translation>истина</translation>
+        <translation>teisingai</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>false</source>
-        <translation>ложь</translation>
+        <translation>neteisingai</translation>
     </message>
     <message>
         <location line="-99"/>
         <location line="+37"/>
         <location line="+64"/>
         <source>Examples:</source>
-        <translation>Примеры:</translation>
+        <translation>Pavyzdžiai:</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Evaluate for &lt;b&gt;&lt;i&gt;true&lt;/i&gt;&lt;/b&gt; or &lt;b&gt;&lt;i&gt;false&lt;/i&gt;&lt;/b&gt; case. Note: nesting conditions is not supported yet.</source>
-        <translation>В случае истинности &lt;b&gt;&lt;i&gt;true&lt;/i&gt;&lt;/b&gt; части, вывести ее; иначе вывести &lt;b&gt;&lt;i&gt;false&lt;/i&gt;&lt;/b&gt; часть. Прим.: вложенные условия пока не поддерживаются.</translation>
+        <translation>Tuo atveju jei &lt;b&gt;&lt;i&gt;teisingai&lt;/i&gt;&lt;/b&gt; dalis yra teisinga, parodyti ją, kitu atveju parodyti &lt;b&gt;&lt;i&gt;neteisingai&lt;/i&gt;&lt;/b&gt; dalį. Pastaba: įdėtos sąlygos kol kas yra nepalaikomos.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Print Artist and Title, separated with &quot;-&quot;. If either of the tags is not available, print file name instead.</source>
-        <translation>Вывести имя артиста и название через тире. Если либо  имя артиста либо название не прописаны, то вывести имя файла.</translation>
+        <translation>Parodyti atlikėją ir pavadinimą, atskirtus brūkšniu &quot;-&quot;. Jei kuri nors iš žymių yra neprieinama, vietoj to, parodyti failo pavadinimą.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Print Genre. If not available, print nothing.</source>
-        <translation>Вывести название жанра. Если не доступно, ничего не выводить.</translation>
+        <translation>Parodyti žanrą. Jei neprieinama, nieko neparodyti.</translation>
     </message>
     <message>
         <location line="-94"/>
         <location line="+37"/>
         <location line="+64"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Užverti</translation>
     </message>
     <message>
         <location line="+143"/>
         <source> (Built-in)</source>
-        <translation> (Встроенный)</translation>
+        <translation> (Įtaisytas)</translation>
     </message>
 </context>
 <context>
@@ -497,22 +497,22 @@
     <message>
         <location filename="../shortcutEditorWidget.cpp" line="+28"/>
         <source>Action</source>
-        <translation>Действие</translation>
+        <translation>Veiksmas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation>Aprašas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Shortcut</source>
-        <translation>Сочетание клавиш</translation>
+        <translation>Spartusis klavišas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Global Shortcut</source>
-        <translation>Глобальное сочетание клавиш</translation>
+        <translation>Visuotinis spartusis klavišas</translation>
     </message>
 </context>
 <context>
@@ -521,7 +521,7 @@
         <location filename="../widgetCollection/volumeSlider.cpp" line="+62"/>
         <location line="+2"/>
         <source>Volume</source>
-        <translation>Громкость</translation>
+        <translation>Garsis</translation>
     </message>
 </context>
 <context>
@@ -529,209 +529,209 @@
     <message>
         <location filename="../preferencesDialog.ui" line="+31"/>
         <source>General</source>
-        <translation>Главные</translation>
+        <translation>Bendra</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Skin:</source>
-        <translation>Скин:</translation>
+        <translation>Apipavidalinimas:</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Switching skins requires restart</source>
-        <translation>Смена скинов требует перезапуска</translation>
+        <translation>Apipavidalinimų keitimas reikalauja paleidimo iš naujo</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Always show icon in system tray</source>
-        <translation>Всегда отображать иконку в системном лотке</translation>
+        <translation>Visada rodyti piktogramą sistemos dėkle</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Hide to system tray when closed</source>
-        <translation>Скрывать в системный лоток при закрытии</translation>
+        <translation>Užveriant, slėpti į sistemos dėklą</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Start in paused state</source>
-        <translation>Запускать в состоянии паузы</translation>
+        <translation>Paleisti programą, pristabdyto takelio būsenoje</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Allow only one instance</source>
-        <translation>Запускать в единственном экземпляре</translation>
+        <translation>Leisti tik vieną programos egzempliorių</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Enqueue files when in one instance</source>
-        <translation>Добавлять файлы в конец плейлиста</translation>
+        <translation>Viename egzemplioriuje, pastatytus į eilę failus pridėti į grojaraštį</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Play enqueued files immediately</source>
-        <translation>При добавлении проигрывать сразу же</translation>
+        <translation>Pridėjus, iš karto groti</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Display log dialog in case of errors</source>
-        <translation>Показывать диалог в случае ошибок</translation>
+        <translation>Klaidų atveju, rodyti žurnalo dialogą</translation>
     </message>
     <message>
         <location line="-27"/>
         <source>Show volume in decibels (using Stevens&apos; law)</source>
-        <translation>Отображать громкость в децибелах (по формуле Стивенса)</translation>
+        <translation>Rodyti garsį decibelais (pagal Styvenso formulę)</translation>
     </message>
     <message>
         <location line="-249"/>
         <source>Language:</source>
-        <translation>Язык:</translation>
+        <translation>Kalba:</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Switching languages requires restart</source>
-        <translation>Смена языка требует перезапуска</translation>
+        <translation>Kalbos keitimas reikalauja paleidimo iš naujo</translation>
     </message>
     <message>
         <location line="+106"/>
         <source>Restore playlist after restart</source>
-        <translation>Восстановить предыдущий плейлист после перезагрузки</translation>
+        <translation>Paleidus programą iš naujo, atkurti ankstesnį grojaraštį</translation>
     </message>
     <message>
         <location line="+118"/>
         <source>Show progress on taskbar (Windows 7+ only)</source>
-        <translation>Отображать состояние проигрывания на панели задач (только для Windows 7+)</translation>
+        <translation>Rodyti eigą užduočių juostoje (tik Windows 7+)</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Automatically check for updates</source>
-        <translation>Автоматическая проверка обновлений</translation>
+        <translation>Automatiškai tikrinti ar yra atnaujinimų</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Check now</source>
-        <translation>Проверить сейчас</translation>
+        <translation>Tikrinti dabar</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Custom File Manager:</source>
-        <translation>Команда файлового менеджера:</translation>
+        <translation>Pasirinktinė failų tvarkytuvė:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Custom Trash Command:</source>
-        <translation>Команда удаления в корзину:</translation>
+        <translation>Pasirinktinė perkėlimo į šiukšlinę komanda:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>File filters:</source>
-        <translation>Фильтр файлов:</translation>
+        <translation>Failų filtrai:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Track Information</source>
-        <translation>Информация о треке</translation>
+        <translation>Takelio informacija</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Window title:</source>
-        <translation>В заголовке окна:</translation>
+        <translation>Lango antraštė:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Playlist item:</source>
-        <translation>В плейлисте:</translation>
+        <translation>Grojaraščio elementas:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Tooltip:</source>
-        <translation>Вслывающая подсказка:</translation>
+        <translation>Mygtuko etiketė:</translation>
     </message>
     <message>
         <location line="-95"/>
         <location line="+25"/>
         <location line="+109"/>
         <source>Help</source>
-        <translation>Помощь</translation>
+        <translation>Pagalba</translation>
     </message>
     <message>
         <location line="-32"/>
         <source>Encoding:</source>
-        <translation type="unfinished">Кодировка:</translation>
+        <translation>Koduotė:</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Waveform sections:</source>
-        <translation>Участки звуковой волны:</translation>
+        <translation>Bangos formos sekcijos:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top</source>
-        <translation>Верхний</translation>
+        <translation>Viršus</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation>Посередине</translation>
+        <translation>Vidurys</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bottom</source>
-        <translation>Нижний</translation>
+        <translation>Apačia</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Left</source>
-        <translation>Левый</translation>
+        <translation>Kairė</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Center</source>
-        <translation>По центру</translation>
+        <translation>Centras</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Right</source>
-        <translation>Правый</translation>
+        <translation>Dešinė</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Keyboard</source>
-        <translation>Горячие клавиши</translation>
+        <translation>Klaviatūra</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Jump #1</source>
-        <translation>Прыжок #1</translation>
+        <translation>Šuolis #1</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Jump #2</source>
-        <translation>Прыжок #2</translation>
+        <translation>Šuolis #2</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Jump #3</source>
-        <translation>Прыжок #3</translation>
+        <translation>Šuolis #3</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Jumps (in seconds):</source>
-        <translation>Прыжок (в секундах):</translation>
+        <translation>Šuoliai (sekundėmis):</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Plugins</source>
-        <translation>Плагины</translation>
+        <translation>Įskiepiai</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Switching plugins requires restart</source>
-        <translation>Переключение плагинов требует перезапуска</translation>
+        <translation>Įskiepių perjungimas reikalauja paleidimo iš naujo</translation>
     </message>
     <message>
         <location filename="../preferencesDialog.cpp" line="-370"/>
         <source>English</source>
-        <translation>Русский</translation>
+        <translation>Lietuvių</translation>
     </message>
 </context>
 <context>
@@ -739,83 +739,83 @@
     <message>
         <location filename="../aboutDialog.cpp" line="-122"/>
         <source>About </source>
-        <translation>О программе </translation>
+        <translation>Apie</translation>
     </message>
     <message>
         <location filename="../widgetCollection/playlistWidget.cpp" line="-355"/>
         <source>File doesn&apos;t exist: &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation>Такого файла не существует: &lt;b&gt;%1&lt;/b&gt;</translation>
+        <translation>Failo nėra: &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Custom File Manager is enabled but not configured.</source>
-        <translation>Команда файлового менеджера включена, но не настроена.</translation>
+        <translation>Pasirinktinė failų tvarkytuvė yra įjungta, bet nekonfigūruota.</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Custom File Manager command failed with exit code &lt;b&gt;%1&lt;/b&gt;.</source>
-        <translation>Команда файлового менеджера завершилась с ошибкой &lt;b&gt;%1&lt;/b&gt;.</translation>
+        <translation>Pasirinktinė failų tvarkytuvės komanda nepavyko su klaidos kodu &lt;b&gt;%1&lt;/b&gt;.</translation>
     </message>
     <message>
         <location filename="../pluginLoader.cpp" line="+155"/>
         <location line="+30"/>
         <source>Plugin loading error</source>
-        <translation>Ощибка при загрузки плагина</translation>
+        <translation>Klaida, įkeliant įskiepį</translation>
     </message>
     <message>
         <location line="-29"/>
         <source>Failed to load plugin: </source>
-        <translation>Этот плагин не может быть загружен: </translation>
+        <translation>Nepavyko įkelti įskiepio: </translation>
     </message>
     <message>
         <location line="+24"/>
         <source>No Waveform plugin found.</source>
-        <translation>Waveform плагин отсутствует.</translation>
+        <translation>Nerastas Waveform įskiepis.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>No Playback plugin found.</source>
-        <translation>Playback плагин отсутствует.</translation>
+        <translation>Nerastas Playback įskiepis.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>No TagReader plugin found.</source>
-        <translation>TagReader плагин отсутствует.</translation>
+        <translation>Nerastas TagReader įskiepis.</translation>
     </message>
     <message>
         <location filename="../preferencesDialog.cpp" line="+482"/>
         <source>System Tray (Notification Area) is not available on your system.</source>
-        <translation>Системный лоток (область уведомлений) на этой системе не доступна.</translation>
+        <translation>Sistemos dėklas (pranešimų sritis) šioje sistemoje yra neprieinamas.</translation>
     </message>
     <message>
         <location filename="../widgetCollection/playlistWidget.cpp" line="-36"/>
         <source>Reveal in File Manager Error</source>
-        <translation>Ошибка файлового менеджера</translation>
+        <translation>Klaida, rodant failų tvarkytuvėje</translation>
     </message>
     <message>
         <location filename="../skinLoader.cpp" line="+164"/>
         <source>Skin loading error</source>
-        <translation>Ошибка загрузки скина</translation>
+        <translation>Klaida, įkeliant apipavidalinimą</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>No skins found.</source>
-        <translation>Скинов не обнаружено.</translation>
+        <translation>Apipavidalinimų nerasta.</translation>
     </message>
     <message>
         <location filename="../trash/trash_x11.cpp" line="+23"/>
         <source>Custom Trash Command is not configured.</source>
-        <translation>Команда удаления в корзину не настроена.</translation>
+        <translation>Pasirinktinė perkėlimo į šiukšlinę komanda yra nekonfigūruota.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Custom Trash Command is enabled but not configured.</source>
-        <translation>Команда удаления в корзину включена, но не настроена.</translation>
+        <translation>Pasirinktinė perkėlimo į šiukšlinę komanda yra įjungta, bet nekonfigūruota.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Custom Trash Command failed with exit code &lt;b&gt;%1&lt;/b&gt;.</source>
-        <translation>Команда удаления в корзину завершилась с ошибкой &lt;b&gt;%1&lt;/b&gt;.</translation>
+        <translation>Pasirinktinė perkėlimo į šiukšlinę komanda nepavyko su klaidos kodu &lt;b&gt;%1&lt;/b&gt;.</translation>
     </message>
 </context>
 <context>
@@ -825,14 +825,14 @@
         <location filename="../skins/silver/form.ui" line="+463"/>
         <location filename="../skins/slim/form.ui" line="+373"/>
         <source>Minimize</source>
-        <translation>Минимизировать</translation>
+        <translation>Sumažinti</translation>
     </message>
     <message>
         <location line="+22"/>
         <location filename="../skins/silver/form.ui" line="+55"/>
         <location filename="../skins/slim/form.ui" line="+31"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Užverti</translation>
     </message>
     <message>
         <location line="+122"/>
@@ -840,7 +840,7 @@
         <location filename="../skins/silver/form.ui" line="+137"/>
         <location filename="../skins/slim/form.ui" line="+59"/>
         <source>Previous</source>
-        <translation>Предыдущий</translation>
+        <translation>Ankstesnis</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -848,14 +848,14 @@
         <location filename="../skins/silver/form.ui" line="+16"/>
         <location filename="../skins/slim/form.ui" line="+28"/>
         <source>Play / Pause</source>
-        <translation>Старт / Пауза</translation>
+        <translation>Groti / Pristabdyti</translation>
     </message>
     <message>
         <location line="+50"/>
         <location filename="../skins/native/form.ui" line="+33"/>
         <location filename="../skins/silver/form.ui" line="+16"/>
         <source>Stop</source>
-        <translation>Стоп</translation>
+        <translation>Stabdyti</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -863,26 +863,26 @@
         <location filename="../skins/silver/form.ui" line="+16"/>
         <location filename="../skins/slim/form.ui" line="+28"/>
         <source>Next</source>
-        <translation>Следующий</translation>
+        <translation>Kitas</translation>
     </message>
     <message>
         <location line="+51"/>
         <location filename="../skins/native/form.ui" line="+43"/>
         <location filename="../skins/silver/form.ui" line="+68"/>
         <source>Repeat</source>
-        <translation>На повторе</translation>
+        <translation>Kartoti</translation>
     </message>
     <message>
         <location line="+28"/>
         <location filename="../skins/native/form.ui" line="+30"/>
         <location filename="../skins/silver/form.ui" line="+25"/>
         <source>Shuffle</source>
-        <translation>Случайный порядок</translation>
+        <translation>Maišyti</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Size Grip</source>
-        <translation>Изменение размеров окна</translation>
+        <translation>Lango dydžio keitimas</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -890,7 +890,7 @@
         <location filename="../skins/silver/form.ui" line="+126"/>
         <location filename="../skins/slim/form.ui" line="+54"/>
         <source>Volume</source>
-        <translation>Громкость</translation>
+        <translation>Garsis</translation>
     </message>
 </context>
 </TS>

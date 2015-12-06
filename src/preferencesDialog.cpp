@@ -36,6 +36,7 @@
 #include <QSpacerItem>
 #include <QTextBrowser>
 #include <QVBoxLayout>
+#include <QTextCodec>
 
 using namespace NPluginLoader;
 
@@ -116,6 +117,15 @@ NPreferencesDialog::NPreferencesDialog(QWidget *parent) : QDialog(parent)
 	connect(ui.skinComboBox, SIGNAL(activated(int)), ui.skinRestartLabel, SLOT(show()));
 
 	ui.waveformTrackInfoTable->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+
+	int i = 0;
+	foreach (int mib, QTextCodec::availableMibs()) {
+		QString codecName = QTextCodec::codecForMib(mib)->name();
+		ui.encodingTrackInfoComboBox->addItem(codecName, mib);
+		if (codecName == "UTF-8")
+			ui.encodingTrackInfoComboBox->setCurrentIndex(i);
+		++i;
+	}
 }
 
 void NPreferencesDialog::showEvent(QShowEvent *event)
@@ -389,6 +399,15 @@ void NPreferencesDialog::loadSettings()
 	ui.waveformTrackInfoTable->setMaximumHeight(height);
 	// << track info overlay
 
+	// track info encoding >>
+	QString encoding = NSettings::instance()->value("EncodingTrackInfo").toString();
+	for (int i = 0; i < ui.encodingTrackInfoComboBox->count(); ++i) {
+		if (ui.encodingTrackInfoComboBox->itemText(i) == encoding) {
+			ui.encodingTrackInfoComboBox->setCurrentIndex(i);
+			break;
+		}
+	}
+	// << track info encoding
 
 	// skins >>
 #ifndef _N_NO_SKINS_
@@ -471,6 +490,9 @@ void NPreferencesDialog::saveSettings()
 	}
 	// << track info overlay
 
+	// track info encoding >>
+	NSettings::instance()->setValue("EncodingTrackInfo", ui.encodingTrackInfoComboBox->itemText(ui.encodingTrackInfoComboBox->currentIndex()));
+	// << track info encoding
 
 	// plugins >>
 	NFlagIterator<N::PluginType> iter(N::MaxPlugin);

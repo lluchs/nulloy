@@ -20,6 +20,7 @@
 #include <QCoreApplication>
 #include <gst/pbutils/pbutils.h>
 #include <QFileInfo>
+#include <QTextCodec>
 
 void NTagReaderGstreamer::init()
 {
@@ -31,10 +32,12 @@ void NTagReaderGstreamer::init()
 
 	int argc;
 	const char **argv;
-	GError *init_err;
+	GError *err = NULL;
 	NCore::cArgs(&argc, &argv);
-	if (!gst_init_check(&argc, (char ***)&argv, &init_err)) {
-		g_error("NTagReaderGstreamer :: error: %s", init_err->message);
+	if (!gst_init_check(&argc, (char ***)&argv, &err)) {
+		qWarning() << "NTagReaderGstreamer :: gst_init_check error ::" << (err ? QString::fromUtf8(err->message) : "unknown error");
+		if (err)
+			g_error_free(err);
 		return;
 	}
 
@@ -59,8 +62,9 @@ void NTagReaderGstreamer::setSource(const QString &file)
 	GError *err = NULL;
 	GstDiscoverer *discoverer = gst_discoverer_new(GST_SECOND * 60, &err);
 	if (discoverer == NULL) {
-		qWarning() << "NTagReaderGstreamer :: GstDiscoverer error ::" << err->message;
-		g_error_free(err);
+		qWarning() << "NTagReaderGstreamer :: GstDiscoverer error ::" << (err ? QString::fromUtf8(err->message) : "unknown error");
+		if (err)
+			g_error_free(err);
 		return;
 	}
 
@@ -96,13 +100,13 @@ NTagReaderGstreamer::~NTagReaderGstreamer()
 		gst_tag_list_free(m_taglist);
 }
 
-QString NTagReaderGstreamer::toString(const QString &format)
+QString NTagReaderGstreamer::toString(const QString &format, const QString &encoding)
 {
 	bool res;
-	return parse(format, &res);
+	return parse(format, &res, encoding);
 }
 
-QString NTagReaderGstreamer::parse(const QString &format, bool *success, bool stopOnFail)
+QString NTagReaderGstreamer::parse(const QString &format, bool *success, const QString &encoding, bool stopOnFail)
 {
 	if (format.isEmpty())
 		return "";
@@ -115,6 +119,7 @@ QString NTagReaderGstreamer::parse(const QString &format, bool *success, bool st
 	int seconds_total = GST_TIME_AS_SECONDS(m_nanosecs);
 
 	QString res;
+	QTextCodec *codec = QTextCodec::codecForName(encoding.toUtf8());
 	for (int i = 0; i < format.size(); ++i) {
 		if (format.at(i) == '%') {
 			gchar *gstr = NULL;
@@ -124,22 +129,22 @@ QString NTagReaderGstreamer::parse(const QString &format, bool *success, bool st
 				if (!(*success = gst_tag_list_get_string(m_taglist, GST_TAG_ARTIST, &gstr)))
 					res += "<Unknown artist>";
 				else
-					res += QString::fromUtf8(gstr);
+					res += codec->toUnicode(QString::fromUtf8(gstr).toLatin1());
 			} else if (ch == 't') {
 				if (!(*success = gst_tag_list_get_string(m_taglist, GST_TAG_TITLE, &gstr)))
 					res += "<Unknown title>";
 				else
-					res += QString::fromUtf8(gstr);
+					res += codec->toUnicode(QString::fromUtf8(gstr).toLatin1());
 			} else if (ch == 'A') {
 				if (!(*success = gst_tag_list_get_string(m_taglist, GST_TAG_ALBUM, &gstr)))
 					res += "<Unknown album>";
 				else
-					res += QString::fromUtf8(gstr);
+					res += codec->toUnicode(QString::fromUtf8(gstr).toLatin1());
 			} else if (ch == 'c') {
 				if (!(*success = gst_tag_list_get_string(m_taglist, GST_TAG_COMMENT, &gstr)))
 					res += "<Empty comment>";
 				else
-					res += QString::fromUtf8(gstr);
+					res += codec->toUnicode(QString::fromUtf8(gstr).toLatin1());
 			} else if (ch == 'g') {
 				if (!(*success = gst_tag_list_get_string(m_taglist, GST_TAG_GENRE, &gstr)))
 					res += "<Unknown genre>";
@@ -252,11 +257,11 @@ QString NTagReaderGstreamer::parse(const QString &format, bool *success, bool st
 			}
 
 			bool cond_res;
-			QString cond_true = parse(values.at(0), &cond_res, true);
+			QString cond_true = parse(values.at(0), &cond_res, encoding, true);
 			if (cond_res) {
 				res += cond_true;
 			} else {
-				res += parse(values.at(1), &cond_res);
+				res += parse(values.at(1), &cond_res, encoding);
 			}
 			i = matchedAt;
 		} else {

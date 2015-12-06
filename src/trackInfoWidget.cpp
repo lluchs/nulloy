@@ -139,12 +139,13 @@ void NTrackInfoWidget::mouseMoveEvent(QMouseEvent *event)
 void NTrackInfoWidget::updateInfo()
 {
 	NTagReaderInterface *tagReader = dynamic_cast<NTagReaderInterface *>(NPluginLoader::getPlugin(N::TagReader));
+	QString encoding = NSettings::instance()->value("EncodingTrackInfo").toString();
 	if (!tagReader->isValid()) {
 		hide();
 	} else {
 		show();
 		foreach (NLabel *label, m_map.keys()) {
-			QString info = tagReader->toString(m_map[label]);
+			QString info = tagReader->toString(m_map[label], encoding);
 			if (!info.isEmpty()) {
 				label->setText(info);
 				label->show();
@@ -179,6 +180,7 @@ void NTrackInfoWidget::tick(qint64 msec)
 	m_msec = msec;
 
 	NTagReaderInterface *tagReader = dynamic_cast<NTagReaderInterface *>(NPluginLoader::getPlugin(N::TagReader));
+	QString encoding = NSettings::instance()->value("EncodingTrackInfo").toString();
 	int total = tagReader->toString("%D").toInt();
 	int hours = total / 60 / 60;
 	QTime current = QTime().addMSecs(msec);
@@ -193,7 +195,7 @@ void NTrackInfoWidget::tick(qint64 msec)
 			text.replace("%r", remaining.toString("m:ss"));
 		}
 		if (text.contains("%"))
-			text = tagReader->toString(text);
+			text = tagReader->toString(text, encoding);
 		label->setText(text);
 		label->show();
 	}
@@ -209,7 +211,7 @@ void NTrackInfoWidget::showToolTip(int x, int y)
 	NTagReaderInterface *tagReader = dynamic_cast<NTagReaderInterface *>(NPluginLoader::getPlugin(N::TagReader));
 	QString text = m_tooltipFormat;
 
-	if (m_tooltipFormat.contains("%C") || m_tooltipFormat.contains("%a")) {
+	if (m_tooltipFormat.contains("%C") || m_tooltipFormat.contains("%o")) {
 		int durationSec = tagReader->toString("%D").toInt();
 		float posAtX = (float)x / width();
 		int secAtX = durationSec * posAtX;
