@@ -1,9 +1,14 @@
 #!/usr/bin/make -f
 
+CHANGELOG_PREFIX := - Fixes against previous release\n- Changelog diff at <a href="http://git.io/v4y0Z">http://git.io/v4y0Z</a>
+VERSION          := $(shell dpkg-parsechangelog | sed -rne 's,^Version: (.*),\1, p')
+DATE             := $(shell date +"%a %b %d %Y")
+
 build: build-stamp
 build-stamp:
 	dh_testdir
-	QMAKE=qmake-qt4 LRELEASE=lrelease-qt4 ./configure --taglib --no-update-check --prefix=/usr $(CONFIG_FLAGS)
+	sed -i "1i * $(VERSION), $(DATE)\n$(CHANGELOG_PREFIX)\n" ChangeLog
+	QMAKE=qmake-qt4 LRELEASE=lrelease-qt4 ./configure --taglib --no-update-check --prefix=/usr $(CONFIG_FLAGS) --force-version="$(VERSION)"
 	make
 	touch build-stamp
 
@@ -35,4 +40,3 @@ binary-arch: build install
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install
-

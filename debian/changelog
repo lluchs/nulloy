@@ -1,0 +1,6 @@
+nulloy (0.8.2-testing-1) precise; urgency=low
+
+  * Fixes against previous release
+  * Changelog diff at http://git.io/v4y0Z
+
+ -- Sergey Vlasov <sergey@vlasov.me>  Wed, 03 Feb 2016 11:00:00 +0300
