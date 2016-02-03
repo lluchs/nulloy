@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -23,30 +23,30 @@
 
 class NTagReaderGstreamer : public NTagReaderInterface, public NPlugin
 {
-	Q_OBJECT
-	Q_INTERFACES(NTagReaderInterface NPlugin)
+    Q_OBJECT
+    Q_INTERFACES(NTagReaderInterface NPlugin)
 
 private:
-	QString m_path;
-	GstTagList *m_taglist;
-	gint64 m_nanosecs;
-	float m_sampleRate;
-	int m_bitDepth;
-	bool m_isValid;
-	QString m_codecName;
-	QString parse(const QString &format, bool *success, const QString &encoding, bool stopOnFail = false);
+    QString m_path;
+    GstTagList *m_taglist;
+    gint64 m_nanosecs;
+    float m_sampleRate;
+    int m_bitDepth;
+    bool m_isValid;
+    QString m_codecName;
+    QString parse(const QString &format, bool *success, const QString &encoding, bool stopOnFail = false);
 
 public:
-	NTagReaderGstreamer(QObject *parent = NULL) : NTagReaderInterface(parent) {}
-	~NTagReaderGstreamer();
+    NTagReaderGstreamer(QObject *parent = NULL) : NTagReaderInterface(parent) {}
+    ~NTagReaderGstreamer();
 
-	void init();
-	QString interfaceString() { return NTagReaderInterface::interfaceString(); }
-	N::PluginType type() { return N::TagReader; }
+    void init();
+    QString interfaceString() { return NTagReaderInterface::interfaceString(); }
+    N::PluginType type() { return N::TagReader; }
 
-	void setSource(const QString &file);
-	QString toString(const QString &format, const QString &encoding);
-	bool isValid();
+    void setSource(const QString &file);
+    QString toString(const QString &format, const QString &encoding);
+    bool isValid();
 };
 
 #endif

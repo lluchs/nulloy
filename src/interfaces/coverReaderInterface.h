@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -25,14 +25,14 @@ class QString;
 class NCoverReaderInterface : public QObject
 {
 public:
-	NCoverReaderInterface(QObject *parent = 0) : QObject(parent) {}
-	virtual ~NCoverReaderInterface() {}
+    NCoverReaderInterface(QObject *parent = 0) : QObject(parent) {}
+    virtual ~NCoverReaderInterface() {}
 
-	static QString interfaceString() { return COVERREADER_INTERFACE; }
+    static QString interfaceString() { return COVERREADER_INTERFACE; }
 
-	virtual void setSource(const QString &file) = 0;
-	virtual QImage getImage() = 0;
-	virtual bool isValid() = 0;
+    virtual void setSource(const QString &file) = 0;
+    virtual QImage getImage() = 0;
+    virtual bool isValid() = 0;
 };
 
 Q_DECLARE_INTERFACE(NCoverReaderInterface, COVERREADER_INTERFACE)

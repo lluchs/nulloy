@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -25,25 +25,25 @@ class QString;
 
 class NShortcutEditorWidget : public QTableWidget
 {
-	Q_OBJECT
+    Q_OBJECT
 
 private:
-	bool m_init;
-	QList<NAction *> m_actionList;
-	static QString keyEventToString(QKeyEvent *e);
-	void keyPressEvent(QKeyEvent *e);
-	enum Columns {
-		Name = 0,
-		Description = 1,
-		Shortcut = 2,
-		GlobalShortcut = 3,
-	};
+    bool m_init;
+    QList<NAction *> m_actionList;
+    static QString keyEventToString(QKeyEvent *e);
+    void keyPressEvent(QKeyEvent *e);
+    enum Columns {
+        Name = 0,
+        Description = 1,
+        Shortcut = 2,
+        GlobalShortcut = 3,
+    };
 
 public:
-	NShortcutEditorWidget(QWidget *parent = 0);
-	~NShortcutEditorWidget(void);
-	void applyShortcuts();
-	void init(const QList<NAction *> &actionList);
+    NShortcutEditorWidget(QWidget *parent = 0);
+    ~NShortcutEditorWidget(void);
+    void applyShortcuts();
+    void init(const QList<NAction *> &actionList);
 };
 
 #endif

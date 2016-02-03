@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -23,8 +23,8 @@ class NPlayer;
 class NScriptEngine : public QScriptEngine
 {
 public:
-	NScriptEngine(NPlayer *player);
-	virtual ~NScriptEngine() {};
+    NScriptEngine(NPlayer *player);
+    virtual ~NScriptEngine() {};
 };
 
 #endif

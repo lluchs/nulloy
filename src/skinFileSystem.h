@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -25,15 +25,15 @@ class QString;
 class NSkinFileSystem : public QAbstractFileEngineHandler
 {
 public:
-	QAbstractFileEngine *create(const QString &fileName) const;
-	static bool init();
-	static void addFile(const QString &filePath, const QByteArray &ba);
-	static QString prefix();
+    QAbstractFileEngine *create(const QString &fileName) const;
+    static bool init();
+    static void addFile(const QString &filePath, const QByteArray &ba);
+    static QString prefix();
 
 private:
-	NSkinFileSystem();
-	static QHash<QString, QByteArray> m_fileHash;
-	static NSkinFileSystem *m_instance;
+    NSkinFileSystem();
+    static QHash<QString, QByteArray> m_fileHash;
+    static NSkinFileSystem *m_instance;
 };
 
 #endif

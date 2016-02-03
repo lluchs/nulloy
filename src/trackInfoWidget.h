@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -25,35 +25,35 @@ class NLabel;
 
 class NTrackInfoWidget : public QFrame
 {
-	Q_OBJECT
+    Q_OBJECT
 
 private:
-	qint64 m_msec;
-	int m_heightThreshold;
-	QString m_tooltipFormat;
-	QMap <NLabel *, QString> m_map;
-	QMap <NLabel *, QString> m_mapTick;
-	QGraphicsOpacityEffect *m_effect;
-	QPropertyAnimation *m_animation;
-	QWidget *m_container;
+    qint64 m_msec;
+    int m_heightThreshold;
+    QString m_tooltipFormat;
+    QMap <NLabel *, QString> m_staticFormatsMap;
+    QMap <NLabel *, QString> m_dynamicFormatsMap;
+    QGraphicsOpacityEffect *m_effect;
+    QPropertyAnimation *m_animation;
+    QWidget *m_container;
 
-	bool event(QEvent *event);
-	void enterEvent(QEvent *event);
-	void leaveEvent(QEvent *event);
-	void resizeEvent(QResizeEvent *event);
-	void mouseMoveEvent(QMouseEvent *event);
+    bool event(QEvent *event);
+    void enterEvent(QEvent *event);
+    void leaveEvent(QEvent *event);
+    void resizeEvent(QResizeEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
 
 public:
-	NTrackInfoWidget(QFrame *parent = 0);
-	~NTrackInfoWidget();
+    NTrackInfoWidget(QFrame *parent = 0);
+    ~NTrackInfoWidget();
 
 public slots:
-	void updateInfo();
-	void readSettings();
-	void tick(qint64 msec);
+    void updateStaticTags();
+    void loadSettings();
+    void tick(qint64 msec);
 
 private slots:
-	void showToolTip(int x, int y);
+    void showToolTip(int x, int y);
 };
 
 #endif

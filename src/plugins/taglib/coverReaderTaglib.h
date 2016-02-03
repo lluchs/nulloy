@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -33,29 +33,29 @@
 
 class NCoverReaderTaglib : public NCoverReaderInterface, public NPlugin
 {
-	Q_OBJECT
-	Q_INTERFACES(NCoverReaderInterface NPlugin)
+    Q_OBJECT
+    Q_INTERFACES(NCoverReaderInterface NPlugin)
 
 private:
-	QImage fromTagBytes(const TagLib::ByteVector &data);
-	QImage fromApe(TagLib::APE::Tag *tag);
-	QImage fromAsf(TagLib::ASF::Tag *tag);
-	QImage fromFlac(TagLib::FLAC::File *file);
-	QImage fromId3(TagLib::ID3v2::Tag *tag);
-	QImage fromMp4(TagLib::MP4::Tag *tag);
-	QImage fromVorbis(TagLib::Tag *tag);
+    QImage fromTagBytes(const TagLib::ByteVector &data);
+    QImage fromApe(TagLib::APE::Tag *tag);
+    QImage fromAsf(TagLib::ASF::Tag *tag);
+    QImage fromFlac(TagLib::FLAC::File *file);
+    QImage fromId3(TagLib::ID3v2::Tag *tag);
+    QImage fromMp4(TagLib::MP4::Tag *tag);
+    QImage fromVorbis(TagLib::Tag *tag);
 
 public:
-	NCoverReaderTaglib(QObject *parent = 0) : NCoverReaderInterface(parent) {}
-	~NCoverReaderTaglib();
+    NCoverReaderTaglib(QObject *parent = 0) : NCoverReaderInterface(parent) {}
+    ~NCoverReaderTaglib();
 
-	void init();
-	QString interfaceString() { return NCoverReaderInterface::interfaceString(); }
-	N::PluginType type() { return N::CoverReader; }
+    void init();
+    QString interfaceString() { return NCoverReaderInterface::interfaceString(); }
+    N::PluginType type() { return N::CoverReader; }
 
-	void setSource(const QString &file);
-	QImage getImage();
-	bool isValid();
+    void setSource(const QString &file);
+    QImage getImage();
+    bool isValid();
 };
 
 #endif

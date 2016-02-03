@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -26,22 +26,22 @@ class QTextBrowser;
 
 class NLogDialog : public QDialog
 {
-	Q_OBJECT
+    Q_OBJECT
 
 private:
-	QTextBrowser *m_textBrowser;
-	QCheckBox *m_checkBox;
-	QString m_oldTitle;
-	QString m_text;
+    QTextBrowser *m_textBrowser;
+    QCheckBox *m_checkBox;
+    QString m_oldTitle;
+    QString m_text;
 
-	void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event);
 
 public:
-	NLogDialog(QWidget *parent = 0);
-	~NLogDialog();
+    NLogDialog(QWidget *parent = 0);
+    ~NLogDialog();
 
 public slots:
-	void showMessage(QMessageBox::Icon icon, const QString &title, const QString &msg);
+    void showMessage(QMessageBox::Icon icon, const QString &title, const QString &msg);
 };
 
 #endif

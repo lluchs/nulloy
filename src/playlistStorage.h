@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -23,10 +23,10 @@
 
 namespace NPlaylistStorage
 {
-	QList<NPlaylistDataItem> readPlaylist(const QString &file);
-	QList<NPlaylistDataItem> readM3u(const QString &file);
+    QList<NPlaylistDataItem> readPlaylist(const QString &file);
+    QList<NPlaylistDataItem> readM3u(const QString &file);
 
-	void writeM3u(const QString &file, QList<NPlaylistDataItem> items, N::M3uExtention ext);
+    void writeM3u(const QString &file, QList<NPlaylistDataItem> items, N::M3uExtention ext);
 };
 
 #endif

@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -20,22 +20,22 @@
 
 class NMacDock : public QObject
 {
-	Q_OBJECT
+    Q_OBJECT
 
 private:
-	NMacDock() {}
-	~NMacDock() {}
-	NMacDock(NMacDock const &copy);
-	NMacDock operator=(NMacDock const &copy);
+    NMacDock() {}
+    ~NMacDock() {}
+    NMacDock(NMacDock const &copy);
+    NMacDock operator=(NMacDock const &copy);
 
 public:
-	static NMacDock* instance();
-	void registerClickHandler();
+    static NMacDock* instance();
+    void registerClickHandler();
 
-	void _emitClicked();
+    void _emitClicked();
 
 signals:
-	void clicked();
+    void clicked();
 };
 
 #endif

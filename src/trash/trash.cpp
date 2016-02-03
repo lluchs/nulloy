@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -20,31 +20,31 @@
 #include <QFile>
 #include <QFileInfo>
 
-int _trash(const QString &path, QString *error);
+int _trash(const QString &file, QString *error);
 
 QStringList NTrash::moveToTrash(QStringList files)
 {
-	foreach (QString file, files) {
-		QString error;
-		if (_trash(file, &error) != 0) {
-			QMessageBox box(QMessageBox::Warning, "Trash Error", "", QMessageBox::Yes | QMessageBox::Cancel, NULL);
-			box.setDefaultButton(QMessageBox::Cancel);
-			box.setText("Couldn't to move to Trash <b>" + QFileInfo(file).fileName() + "</b>." +
-			            (error.isEmpty() ? "" : " <br>" + error));
-			box.setInformativeText("Do you want to delete permanently?");
-			if (box.exec() == QMessageBox::Yes) {
-				if (!QFile::remove(file)) {
-					QMessageBox::critical(NULL, "File Delete Error", "Failed to delete <b>" + file + "</b>.");
-					break;
-				}
-			} else {
-				break;
-			}
-		}
+    foreach (QString file, files) {
+        QString error;
+        if (_trash(file, &error) != 0) {
+            QMessageBox box(QMessageBox::Warning, "Trash Error", "", QMessageBox::Yes | QMessageBox::Cancel, NULL);
+            box.setDefaultButton(QMessageBox::Cancel);
+            box.setText("Couldn't to move to Trash <b>" + QFileInfo(file).fileName() + "</b>." +
+                        (error.isEmpty() ? "" : " <br>" + error));
+            box.setInformativeText("Do you want to delete permanently?");
+            if (box.exec() == QMessageBox::Yes) {
+                if (!QFile::remove(file)) {
+                    QMessageBox::critical(NULL, "File Delete Error", "Failed to delete <b>" + file + "</b>.");
+                    break;
+                }
+            } else {
+                break;
+            }
+        }
 
-		files.removeAt(files.indexOf(file));
-	}
+        files.removeAt(files.indexOf(file));
+    }
 
-	return files;
+    return files;
 }
 

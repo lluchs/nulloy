@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -25,30 +25,30 @@ class QString;
 class NAbstractWaveformBuilder
 {
 private:
-	int m_oldIndex;
-	float m_oldPos;
-	bool m_cacheLoaded;
-	QString m_cacheFile;
+    int m_oldIndex;
+    float m_oldPos;
+    bool m_cacheLoaded;
+    QString m_cacheFile;
 
-	void cacheLoad();
-	void cacheSave();
+    void cacheLoad();
+    void cacheSave();
 
 protected:
-	NWaveformPeaks m_peaks;
-	NCache<QByteArray, NWaveformPeaks> m_peaksCache;
-	QHash<QByteArray, QString> m_dateHash;
+    NWaveformPeaks m_peaks;
+    NCache<QByteArray, NWaveformPeaks> m_peaksCache;
+    QHash<QByteArray, QString> m_dateHash;
 
-	virtual void reset();
-	virtual qreal position() = 0;
-	bool peaksFindFromCache(const QString &file);
-	void peaksAppendToCache(const QString &file);
+    virtual void reset();
+    virtual qreal position() = 0;
+    bool peaksFindFromCache(const QString &file);
+    void peaksAppendToCache(const QString &file);
 
 public:
-	NAbstractWaveformBuilder();
-	~NAbstractWaveformBuilder();
+    NAbstractWaveformBuilder();
+    ~NAbstractWaveformBuilder();
 
-	NWaveformPeaks* peaks() { return &m_peaks; }
-	void positionAndIndex(float &pos, int &index);
+    NWaveformPeaks* peaks() { return &m_peaks; }
+    void positionAndIndex(float &pos, int &index);
 };
 
 #endif

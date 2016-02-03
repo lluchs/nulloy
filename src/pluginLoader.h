@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -22,18 +22,18 @@
 
 namespace NPluginLoader
 {
-	enum DescriptorRole {
-		TypeRole = 0,
-		ContainerNameRole,
-		PluginObjectRole,
-		LoaderObjectRole
-	};
-	typedef QMap<DescriptorRole, QVariant> Descriptor;
-	QList<Descriptor> descriptors();
+    enum DescriptorRole {
+        TypeRole = 0,
+        ContainerNameRole,
+        PluginObjectRole,
+        LoaderObjectRole
+    };
+    typedef QMap<DescriptorRole, QVariant> Descriptor;
+    QList<Descriptor> descriptors();
 
-	NPlugin* getPlugin(N::PluginType type);
+    NPlugin* getPlugin(N::PluginType type);
 
-	void deinit();
+    void deinit();
 }
 
 #endif

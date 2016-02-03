@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -20,18 +20,18 @@
 
 class NContainerTaglib : public QObject, public NPluginContainer
 {
-	Q_OBJECT
-	Q_INTERFACES(NPluginContainer)
+    Q_OBJECT
+    Q_INTERFACES(NPluginContainer)
 
 private:
-	QList<NPlugin *> m_plugins;
+    QList<NPlugin *> m_plugins;
 
 public:
-	NContainerTaglib(QObject *parent = NULL);
-	~NContainerTaglib();
-	QList<NPlugin *> plugins();
-	QString name() { return "TagLib"; }
-	QString version() { return "0.7"; }
+    NContainerTaglib(QObject *parent = NULL);
+    ~NContainerTaglib();
+    QList<NPlugin *> plugins();
+    QString name() { return "TagLib"; }
+    QString version() { return "0.8.2"; }
 };
 
 #endif

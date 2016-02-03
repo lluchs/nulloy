@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -20,20 +20,20 @@
 
 class NVolumeSlider : public NSlider
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	NVolumeSlider(QWidget *parent);
+    NVolumeSlider(QWidget *parent);
 
 private:
-	void mousePressEvent(QMouseEvent *event);
-	void mouseMoveEvent(QMouseEvent *event);
-	void wheelEvent(QWheelEvent *e);
-	QString toolTipText(int value);
+    void mousePressEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
+    void wheelEvent(QWheelEvent *e);
+    QString toolTipText(int value);
 
 private slots:
-	void on_valueChanged(int value);
-	void showToolTip(int x, int y);
+    void on_valueChanged(int value);
+    void showToolTip(int x, int y);
 };
 
 #endif

@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -24,15 +24,15 @@
 class NWaveformBuilderInterface : public QThread
 {
 public:
-	NWaveformBuilderInterface(QObject *parent = 0) : QThread(parent) {}
-	virtual ~NWaveformBuilderInterface() {}
+    NWaveformBuilderInterface(QObject *parent = 0) : QThread(parent) {}
+    virtual ~NWaveformBuilderInterface() {}
 
-	virtual void start(const QString &file) = 0;
-	virtual void stop() = 0;
-	virtual void positionAndIndex(float &pos, int &index) = 0;
-	virtual NWaveformPeaks* peaks() = 0;
+    virtual void start(const QString &file) = 0;
+    virtual void stop() = 0;
+    virtual void positionAndIndex(float &pos, int &index) = 0;
+    virtual NWaveformPeaks* peaks() = 0;
 
-	static QString interfaceString() { return WAVEFORM_INTERFACE; }
+    static QString interfaceString() { return WAVEFORM_INTERFACE; }
 };
 
 Q_DECLARE_INTERFACE(NWaveformBuilderInterface, WAVEFORM_INTERFACE)

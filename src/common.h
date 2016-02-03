@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -20,12 +20,12 @@
 
 namespace NCore
 {
-	void cArgs(int *argc, const char ***argv);
-	QString applicationBinaryName();
-	QString defaultPlaylistPath();
-	QString settingsPath();
-	QString rcDir();
-	QStringList dirListRecursive(const QString &path, const QStringList &nameFilters = QStringList());
+    void cArgs(int *argc, const char ***argv);
+    QString applicationBinaryName();
+    QString defaultPlaylistPath();
+    QString settingsPath();
+    QString rcDir();
+    QStringList dirListRecursive(const QString &path, const QStringList &nameFilters = QStringList());
 }
 
 #endif

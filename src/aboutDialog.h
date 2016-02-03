@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -20,14 +20,14 @@
 
 class NAboutDialog : public QDialog
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	NAboutDialog(QWidget *parent = 0);
-	~NAboutDialog();
+    NAboutDialog(QWidget *parent = 0);
+    ~NAboutDialog();
 
 public slots:
-	void show();
+    void show();
 };
 
 #endif

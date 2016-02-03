@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -19,19 +19,19 @@
 
 NContainerTaglib::NContainerTaglib(QObject *parent) : QObject(parent)
 {
-	m_plugins << new NTagReaderTaglib()
-	          << new NCoverReaderTaglib();
+    m_plugins << new NTagReaderTaglib()
+              << new NCoverReaderTaglib();
 }
 
 NContainerTaglib::~NContainerTaglib()
 {
-	foreach (NPlugin *plugin, m_plugins)
-		delete plugin;
+    foreach (NPlugin *plugin, m_plugins)
+        delete plugin;
 }
 
 QList<NPlugin *> NContainerTaglib::plugins()
 {
-	return m_plugins;
+    return m_plugins;
 }
 
 Q_EXPORT_PLUGIN2(plugin_taglib, NContainerTaglib)

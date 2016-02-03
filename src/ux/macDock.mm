@@ -1,6 +1,6 @@
 /********************************************************************
 **  Nulloy Music Player, http://nulloy.com
-**  Copyright (C) 2010-2015 Sergey Vlasov <sergey@vlasov.me>
+**  Copyright (C) 2010-2016 Sergey Vlasov <sergey@vlasov.me>
 **
 **  This program can be distributed under the terms of the GNU
 **  General Public License version 3.0 as published by the Free
@@ -22,27 +22,27 @@ static NMacDock *_instance = NULL;
 
 void _handleClick(id, SEL)
 {
-	_instance->_emitClicked();
+    _instance->_emitClicked();
 }
 
 NMacDock* NMacDock::instance()
 {
-	if (!_instance)
-		_instance = new NMacDock();
-	return _instance;
+    if (!_instance)
+        _instance = new NMacDock();
+    return _instance;
 }
 
 void NMacDock::registerClickHandler()
 {
-	Class cls = [[[NSApplication sharedApplication] delegate] class];
-	SEL sel = @selector(applicationShouldHandleReopen:hasVisibleWindows:);
-	if (class_getInstanceMethod(cls, sel))
-		class_replaceMethod(cls, sel, (IMP)_handleClick, "v@:");
-	else
-		class_addMethod(cls, sel, (IMP)_handleClick,"v@:");
+    Class cls = [[[NSApplication sharedApplication] delegate] class];
+    SEL sel = @selector(applicationShouldHandleReopen:hasVisibleWindows:);
+    if (class_getInstanceMethod(cls, sel))
+        class_replaceMethod(cls, sel, (IMP)_handleClick, "v@:");
+    else
+        class_addMethod(cls, sel, (IMP)_handleClick,"v@:");
 }
 
 void NMacDock::_emitClicked()
 {
-	emit clicked();
+    emit clicked();
 }
