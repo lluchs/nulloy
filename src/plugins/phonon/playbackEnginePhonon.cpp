@@ -90,7 +90,7 @@ void NPlaybackEnginePhonon::setPosition(qreal pos)
         m_savedPosition = pos;
 }
 
-qreal NPlaybackEnginePhonon::position() const
+qreal NPlaybackEnginePhonon::position()
 {
     if (!hasMedia())
         return -1;

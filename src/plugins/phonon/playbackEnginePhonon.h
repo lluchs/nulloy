@@ -44,7 +44,7 @@ public:
     Q_INVOKABLE N::PlaybackState state() const;
 
     Q_INVOKABLE qreal volume() const;
-    Q_INVOKABLE qreal position() const;
+    Q_INVOKABLE qreal position();
     Q_INVOKABLE qint64 durationMsec() const;
 
 public slots:

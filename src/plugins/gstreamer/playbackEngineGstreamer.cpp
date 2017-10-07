@@ -171,7 +171,7 @@ void NPlaybackEngineGStreamer::jump(qint64 msec)
                             posNsec);
 }
 
-qreal NPlaybackEngineGStreamer::position() const
+qreal NPlaybackEngineGStreamer::position()
 {
     return m_crossfading ? 0 : m_oldPosition;
 }
